@@ -1,0 +1,118 @@
+:root{
+/* Primary */
+
+--clr-primary-dark-Magenta: hsl(300, 43%, 22%);
+--clr-primary-white: hsl(0, 0%, 100%);
+--clr-secondary-light-Pink: hsl(333, 80%, 67%);
+/* Neutral */
+
+--clr-yDark-Gray-Magenta: hsl(303, 10%, 53%);
+--clr-Light-Grayi-Magenta: hsl(300, 24%, 96%);
+
+/* font family */
+--ff-nomal: 'League Spartan', sans-serif;
+/* font weights */
+--fw-normal:400;
+--fw-medium:500;
+--fw-bold:700;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+}
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* add context for items that wont be picked up by screen reader */
+.visually-hidden:not(:focus):not(:active){
+    clip: (0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'League Spartan', sans-serif;   
+
+}
+
+.product__reveiw_container{
+    display: grid;
+    padding: 1rem;
+    border:solid red 2px;
+    max-width: 375px;
+}
+
+main .product__reveiw__container-rating{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    border: solid green 2px;
+}
+section h1{
+    text-align: center;
+    color: var(--clr-primary-dark-Magenta);
+    font-size: 2.5rem;
+    font-weight: var(--fw-bold);
+    line-height: 0.8;
+
+}
+
+.product__reveiw__container-rating p{
+  color: var(--clr-yDark-Gray-Magenta);
+  text-align: center;
+}
