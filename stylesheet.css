@@ -35,10 +35,9 @@
 html:focus-within {
   scroll-behavior: smooth;
 }
-html,
+/* html,
 body {
-  height: 100%;
-}
+} */
 /* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
@@ -115,4 +114,27 @@ section h1{
 .product__reveiw__container-rating p{
   color: var(--clr-yDark-Gray-Magenta);
   text-align: center;
+}
+
+.star::before {
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  color: grey;
+  content: "\f005";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+li{
+  list-style-type: none;
+  display: inline;
+}
+
+.star.checked::before{
+  font-weight: 900; 
+  color: orange;
 }
