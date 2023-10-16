@@ -81,6 +81,7 @@ svg {
 
 body {
   display: flex;
+  justify-content: center;
   font-family: "League Spartan", sans-serif;
   font-size: 1.125rem;
 }
@@ -213,4 +214,48 @@ section h1 {
   grid-column: 1/3;
   font-size: 17px;
   font-weight: var(--fw-medium);
+}
+
+@media(min-width:600px){
+  .product__reveiw_container{
+    max-width: 1000px;
+
+   
+
+  }
+  main .product__reveiw__container-rating{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+  }
+  .test{
+    display: grid;
+    grid-template-columns: 1fr 1fr repeat(6, 3fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+  .stars1{
+   background-color: aqua;
+   grid-column: 1/5;
+  
+  }
+
+  .stars2{
+    background-color: yellow;
+    grid-row: 2/3;
+    grid-column: 2/6;
+
+  }
+  .stars3{
+    background-color: pink; 
+    grid-row: 3/4;
+    grid-column: 3/7;
+  }
+  .product__reveiw__container-stars h2{
+    display: inline;
+  }
+
+
+
+
 }
