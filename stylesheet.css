@@ -1,20 +1,20 @@
-:root{
-/* Primary */
+:root {
+  /* Primary */
 
---clr-primary-dark-Magenta: hsl(300, 43%, 22%);
---clr-primary-white: hsl(0, 0%, 100%);
---clr-secondary-light-Pink: hsl(333, 80%, 67%);
-/* Neutral */
+  --clr-primary-dark-Magenta: hsl(300, 43%, 22%);
+  --clr-primary-white: hsl(0, 0%, 100%);
+  --clr-secondary-light-Pink: hsl(333, 80%, 67%);
+  /* Neutral */
 
---clr-yDark-Gray-Magenta: hsl(303, 10%, 53%);
---clr-Light-Grayi-Magenta: hsl(300, 24%, 96%);
+  --clr-Dark-Gray-Magenta: hsl(303, 10%, 53%);
+  --clr-Light-Gray-Magenta: hsl(300, 24%, 96%);
 
-/* font family */
---ff-nomal: 'League Spartan', sans-serif;
-/* font weights */
---fw-normal:400;
---fw-medium:500;
---fw-bold:700;
+  /* font family */
+  --ff-nomal: "League Spartan", sans-serif;
+  /* font weights */
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
 }
 
 /* Box sizing rules */
@@ -35,14 +35,13 @@
 html:focus-within {
   scroll-behavior: smooth;
 }
-html,
+/* html,
 body {
-  height: 100%;
-}
+} */
 /* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 
 /* Make images easier to work with */
@@ -70,51 +69,40 @@ svg {
 }
 
 /* add context for items that wont be picked up by screen reader */
-.visually-hidden:not(:focus):not(:active){
-    clip: (0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+.visually-hidden:not(:focus):not(:active) {
+  clip: (0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'League Spartan', sans-serif;   
-
+body {
+  display: flex;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.125rem;
 }
 
-.product__reveiw_container{
-    display: grid;
-    padding: 1rem;
-    border:solid red 2px;
-    max-width: 375px;
+.product__reveiw_container {
+  display: grid;
+  gap: 1rem;
+  padding: 3rem 1.1rem;
+  /* border: solid red 2px; */
+  max-width: 375px;
 }
 
-main .product__reveiw__container-rating{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
-    border: solid green 2px;
+main .product__reveiw__container-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
 }
-section h1{
-    text-align: center;
-    color: var(--clr-primary-dark-Magenta);
-    font-size: 2.5rem;
-    font-weight: var(--fw-bold);
-    line-height: 0.8;
-
-}
-
-.product__reveiw__container-rating p{
-  color: var(--clr-yDark-Gray-Magenta);
+section h1 {
   text-align: center;
+<<<<<<< HEAD
 }
 
 
@@ -133,4 +121,94 @@ section h1{
 .product__reveiw__container-customer-reveiw p {
   color: var(--clr-primary-white);
   background-color: var(--clr-primary-dark-Magenta);
+=======
+  color: var(--clr-primary-dark-Magenta);
+  font-size: 2.5rem;
+  font-weight: var(--fw-bold);
+  line-height: 0.8;
+}
+
+.product__reveiw__container-rating p {
+  color: var(--clr-Dark-Gray-Magenta);
+  text-align: center;
+  font-weight: var(--fw-medium);
+  padding-bottom: 1.75rem;
+}
+
+.product__reveiw__container-stars {
+  text-align: center;
+  background-color: var(--clr-Light-Gray-Magenta);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.star::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin:  0.2rem;
+  font-size: 0.9rem;
+  color: grey;
+  content: "\f005";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+.product__reveiw__container-stars ul{
+  margin-bottom: 0.75rem;
+}
+.product__reveiw__container-stars li {
+  list-style-type: none;
+  display: inline;
+  margin-top: 1rem;
+}
+
+.product__reveiw__container-stars h2 {
+  color: var(--clr-primary-dark-Magenta);
+  font-weight: var(--fw-bold);
+  font-size: 1rem;
+ 
+}
+
+.star.checked::before {
+  font-weight: 900;
+  color: hsl(28, 84%, 61%);
+}
+
+.product__reveiw__container__customer-reveiw {
+  padding: 2.25rem 2rem;
+  margin-top: 1.75rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  background-color: var(--clr-primary-dark-Magenta);
+  color: white;
+  border-radius: 0.5rem;
+}
+.product__reveiw__container__customer-reveiw img {
+  max-height: 40px;
+  border-radius: 50%;
+}
+
+.product__reveiw__container__customer-details {
+  padding-bottom: 2rem;
+  font-size: 1rem;
+}
+
+#customer_name {
+  font-weight: var(--fw-bold);
+}
+
+#varified {
+  color: var(--clr-secondary-light-Pink);
+}
+
+.product__reveiw__container__customer-testimonials {
+  grid-column: 1/3;
+  font-size: 17px;
+  font-weight: var(--fw-medium);
+>>>>>>> 7ec827e78e5e96599ed28e7af5c08c3901465d18
 }
